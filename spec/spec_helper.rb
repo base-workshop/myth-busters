@@ -17,6 +17,7 @@ RSpec.configure do |config|
   config.include Automatix::Helper::Web
 
   config.before(:all) do
+    ENV['BROWSER'] ||= "chrome"
     @browser_res_x = 1366
     @browser_res_y = 768
 
