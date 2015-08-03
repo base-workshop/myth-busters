@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'page-object',        '~> 0.9.8'
-gem 'selenium-webdriver', '~> 2.43.0'
+gem 'page-object'
+gem 'selenium-webdriver'
 gem 'watir-wait_with_refresh'
 gem 'rspec'
 gem 'faker'

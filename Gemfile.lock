@@ -23,10 +23,10 @@ GEM
     method_source (0.8.2)
     minitest (4.7.5)
     multi_json (1.11.2)
-    page-object (0.9.8)
+    page-object (1.1.0)
       page_navigation (>= 0.9)
-      selenium-webdriver (>= 2.40.0)
-      watir-webdriver (>= 0.6.8)
+      selenium-webdriver (>= 2.44.0)
+      watir-webdriver (>= 0.6.11)
     page_navigation (0.9)
       data_magic (>= 0.14)
     pry (0.10.1)
@@ -50,7 +50,7 @@ GEM
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
     rubyzip (1.1.7)
-    selenium-webdriver (2.43.0)
+    selenium-webdriver (2.47.1)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
@@ -63,8 +63,8 @@ GEM
       watir-webdriver
     watir-wait_with_refresh (0.0.1)
       watir
-    watir-webdriver (0.6.11)
-      selenium-webdriver (>= 2.18.0)
+    watir-webdriver (0.8.0)
+      selenium-webdriver (>= 2.46.2)
     websocket (1.2.2)
     yml_reader (0.5)
 
@@ -75,10 +75,10 @@ DEPENDENCIES
   activesupport (~> 4.0.1)
   colored
   faker
-  page-object (~> 0.9.8)
+  page-object
   pry
   pry-nav
   require_all
   rspec
-  selenium-webdriver (~> 2.43.0)
+  selenium-webdriver
   watir-wait_with_refresh
