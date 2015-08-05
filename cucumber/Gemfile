@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'cucumber'
+gem 'rspec'
+gem 'rake'
+gem 'page-object'
+gem 'pry'
+gem 'pry-nav'
+gem 'require_all'
+
