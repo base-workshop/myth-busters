@@ -13,10 +13,24 @@ class NavigationPage
   link(:trial, :css => '.trial-countdown ')
   link(:notifications_bell, :css => ".base-popover .visibility-toggle")
   link(:settings, :href => '#user-dd')
+  link(:active_deals_view, :class => 'list-view')
+  link(:deals_list_view, :class => 'stage-view')
 
   def go_to_settings_page(subpage=nil)
-    settings_element.click
+    settings_element.when_visible.click
     link_element(:href => "/settings/profile").when_visible.click
     link_element(:href => "/settings/#{subpage}").when_visible.click if subpage
+  end
+
+  def navigate_to_active_deals_view
+    sales_element.click
+    active_deals_view_element.when_visible(10).hover
+    active_deals_view_element.click
+  end
+
+  def navigate_to_deals_list
+    sales_element.click
+    deals_list_view_element.when_visible(10).hover
+    deals_list_view_element.click
   end
 end

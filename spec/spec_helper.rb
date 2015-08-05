@@ -10,12 +10,14 @@ require 'require_all'
 require 'colored'
 require 'active_support/time'
 
-require_rel 'support'
+require_rel '../support'
 
 RSpec.configure do |config|
   config.include PageObject::PageFactory
   config.include Automatix::Helper::Web
-
+  
+  PageObject.default_element_wait = 10
+  
   config.before(:all) do
     ENV['BROWSER'] ||= "chrome"
     @browser_res_x = 1366
@@ -29,7 +31,6 @@ RSpec.configure do |config|
     else
       raise "Unsupported browser: " + ENV['BROWSER']
     end
-
     @browser.window.resize_to(@browser_res_x, @browser_res_y)
     config_path = ENV["CONFIG_PATH"] || "config/settings.yml"
     @config = YAML.load_file(config_path)

@@ -7,6 +7,8 @@ class LoginPage
   text_field(:password, :id => 'user_password')
   button(:login, :css => '.btn')
 
+  div(:alert, css: '.alert.alert-error')
+
   def login_with(email, password)
     self.email = email
     self.password = password

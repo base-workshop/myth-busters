@@ -7,6 +7,11 @@ module Automatix
         on(LoginPage).login_with(email, password)
         on(DashboardPage).wait_until { @current_page.activity_element.visible? }
       end
+
+      def logout
+        visit(LogoutPage)
+      end
+      
     end
   end
 end
