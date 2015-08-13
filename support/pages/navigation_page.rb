@@ -33,4 +33,8 @@ class NavigationPage
     deals_list_view_element.when_visible(10).hover
     deals_list_view_element.click
   end
+
+  def search_for_deal deal_name
+    self.global_search_element.when_visible.value = deal_name
+  end
 end
